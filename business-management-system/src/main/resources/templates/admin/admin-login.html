@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/main.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>🔐 Admin Login</h2>
+
+    <div class="card">
+        <input type="email" id="email" placeholder="Enter Email">
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="adminLogin()">Login</button>
+    </div>
+
+    <div class="nav">
+        <a href="/admin/register">Register Here</a>
+		
+    </div>
+	<div class="nav">
+	    <a href="/">⬅ Back to Home</a>
+	</div>
+</div>
+
+<script>
+function adminLogin() {
+    const data = { email: email.value, password: password.value };
+
+    if (!data.email || !data.password) return alert("All fields required");
+
+    login("/api/admin/login", data, "/admin/dashboard");
+}
+</script>
+
+</body>
+</html>

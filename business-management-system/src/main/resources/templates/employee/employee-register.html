@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Register</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body onload="init()">
+
+<div class="container">
+    <h2>👨‍💼 Employee Register</h2>
+
+    <div class="card">
+        <input id="ename" placeholder="Full Name">
+        <input id="email" placeholder="Email">
+        <input id="phone" placeholder="Phone">
+
+        <select id="designation">
+            <option value="">Select Designation</option>
+            <option>Staff</option>
+            <option>Cashier</option>
+            <option>Manager</option>
+        </select>
+
+        <select id="companySelect"></select>
+
+        <button onclick="registerEmployee()">Register</button>
+    </div>
+	<div class="nav">
+	    <a href="/employee/login">Login</a>
+	    <br>
+	    <a href="/">⬅ Back to Home</a>
+	</div>
+</div>
+
+<script src="/js/main.js"></script>
+<script src="/js/employee.js"></script>
+
+</body>
+</html>

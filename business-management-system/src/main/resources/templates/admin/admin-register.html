@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Register</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/main.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>📝 Admin Register</h2>
+
+    <div class="card">
+        <input id="fullName" placeholder="Full Name">
+        <input id="email" placeholder="Email">
+        <input id="phone" placeholder="Phone">
+        <input id="password" placeholder="Password">
+        <button onclick="registerAdmin()">Register</button>
+    </div>
+</div>
+<div class="nav">
+    <a href="/admin/login">Already have account? Login</a>
+    <br>
+    <a href="/">⬅ Back to Home</a>
+</div>
+
+<script>
+function registerAdmin() {
+    const data = {
+        fullName: fullName.value,
+        email: email.value,
+        phone: phone.value,
+        password: password.value
+    };
+
+    register("/api/admin", data);
+}
+</script>
+
+</body>
+</html>

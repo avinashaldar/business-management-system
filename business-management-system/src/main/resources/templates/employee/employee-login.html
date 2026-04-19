@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+<div class="container">
+    <h2>👨‍💼 Employee Login</h2>
+
+    <div class="card">
+        <input id="email" placeholder="Email">
+        <input id="phone" placeholder="Phone">
+        <button onclick="loginEmployee()">Login</button>
+    </div>
+
+    <div class="nav">
+        <a href="/employee/register">Register</a>
+    </div>
+</div>
+<div class="nav">
+    <a href="/employee/register">Register</a>
+    <br>
+    <a href="/">⬅ Back to Home</a>
+</div>
+
+<script>
+const BASE = "http://localhost:8080";
+
+async function loginEmployee() {
+    const data = { email: email.value, phone: phone.value };
+
+    const res = await fetch(BASE + "/api/employees/login", {
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify(data)
+    });
+
+    const result = await res.json();
+
+    if(result.success){
+        localStorage.setItem("employee", JSON.stringify(result.data));
+        window.location.href="/employee/dashboard";
+    } else alert(result.message);
+}
+</script>
+
+</body>
+</html>

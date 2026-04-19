@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body onload="init()">
+
+<div class="container">
+    <h2>Admin Dashboard</h2>
+
+    <button onclick="logout()">Logout</button>
+
+    <hr>
+
+    <!-- ================= COMPANY ================= -->
+    <h3>Company Management</h3>
+
+    <button onclick="toggle('companyForm')">+ Create Company</button>
+
+    <div id="companyForm" style="display:none;">
+        <input id="cname" placeholder="Company Name">
+        <input id="cemail" placeholder="Email">
+        <input id="cphone" placeholder="Phone">
+        <input id="caddress" placeholder="Address">
+        <input id="cwebsite" placeholder="Website">
+        <input id="ctax" placeholder="Tax Number">
+
+        <button onclick="saveCompany()">Save</button>
+    </div>
+
+    <table border="1" width="100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Website</th>
+                <th>Tax</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="companyTable"></tbody>
+    </table>
+
+    <hr>
+
+    <!-- ================= PRODUCT ================= -->
+    <h3>Product Management</h3>
+
+    <button onclick="toggle('productForm')">+ Add Product</button>
+
+    <div id="productForm" style="display:none;">
+        <input id="pname" placeholder="Product Name">
+        <input id="pprice" placeholder="Price">
+        <input id="pdesc" placeholder="Description">
+
+        <select id="pcompany"></select>
+
+        <button onclick="saveProduct()">Save</button>
+    </div>
+
+    <table border="1" width="100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Company</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="productTable"></tbody>
+    </table>
+
+</div>
+
+<!-- ✅ LINK JS -->
+<script src="/js/admin.js"></script>
+
+</body>
+</html>

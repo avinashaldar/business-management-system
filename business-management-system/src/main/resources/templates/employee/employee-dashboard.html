@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body onload="init()">
+
+<div class="container">
+
+    <h2 id="welcome"></h2>
+
+    <button onclick="logout()">Logout</button>
+
+    <hr>
+
+    <!-- ================= BILLING ================= -->
+    <h3>Generate Invoice</h3>
+
+    <select id="productSelect"></select>
+    <input type="number" id="quantity" placeholder="Quantity">
+
+    <button onclick="addItem()">Add Item</button>
+
+    <table border="1" width="100%">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Total</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="itemsTable"></tbody>
+    </table>
+
+    <br>
+
+    <!-- TAX & DISCOUNT -->
+    <input id="tax" placeholder="Tax (%)">
+    <input id="discount" placeholder="Discount (%)">
+
+    <!-- PAYMENT -->
+    <select id="paymentMode">
+        <option value="">Select Payment</option>
+        <option value="CASH">Cash</option>
+        <option value="UPI">UPI</option>
+    </select>
+
+    <!-- BREAKDOWN -->
+    <p>Base: ₹<span id="base">0</span></p>
+    <p>Tax: ₹<span id="taxVal">0</span></p>
+    <p>Discount: ₹<span id="discountVal">0</span></p>
+
+    <h3>Net Total: ₹<span id="total">0</span></h3>
+
+    <!-- ACTION BUTTONS -->
+    <button onclick="saveInvoice()">Save Invoice</button>
+    <button onclick="generateInvoice()">Generate Invoice PDF</button>
+
+</div>
+
+<!-- ✅ LINK JS -->
+<script src="/js/employee.js"></script>
+
+</body>
+</html>
