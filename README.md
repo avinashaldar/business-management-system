@@ -18,8 +18,8 @@ A full-stack business management system built using Spring Boot.
 - Payment integration
 - Analytics dashboard
 
-- 👨‍💻 Author
+## 👨‍💻 Author
 Avinash Aldar
--📧 Email: avinashaldar20@gmail.com
--🔗 LinkedIn: https://linkedin.com/in/avinashaldar
--💻 GitHub: https://github.com/avinashaldar
+📧 Email: avinashaldar20@gmail.com
+🔗 LinkedIn: https://linkedin.com/in/avinashaldar
+💻 GitHub: https://github.com/avinashaldar
