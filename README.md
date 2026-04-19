@@ -20,6 +20,3 @@ A full-stack business management system built using Spring Boot.
 
 ## 👨‍💻 Author
 Avinash Aldar
-📧 Email: avinashaldar20@gmail.com
-🔗 LinkedIn: https://linkedin.com/in/avinashaldar
-💻 GitHub: https://github.com/avinashaldar
